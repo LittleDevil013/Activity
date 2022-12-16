@@ -34,7 +34,7 @@ let wordGenerator = document.getElementById('addWord');
 let myWordTextArea = document.getElementById('word');
 let timeStarter = document.getElementById('startClock');
 let timeArea = document.getElementById('clock');
-let openTime = 35;
+let openTime = 150;
 let nextPlayer = document.getElementById('nextPlayer');
 let cardPlace = document.getElementById('cardPlace');
 let pNameText = document.getElementById('pNameText');
@@ -119,7 +119,7 @@ timeStarter.onclick = function () {
 };
 
 nextPlayer.onclick = function () {
-    openTime = 35;
+    openTime = 150;
     getNewPlayer();
 
 
