@@ -1,0 +1,127 @@
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+#gameArea {
+    overflow: hidden;
+    margin: auto;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(background.jpg);
+    width: 1400px;
+    height: 770px;
+}
+
+#inputArea {
+    padding-top: 250px;
+    margin-left: 30px;
+    float: left;
+
+}
+
+button {
+    font-family: Ink free;
+    font-size: 20px;
+    background-color: gray;
+    color: black;
+    border: 1px;
+    border-radius: 3px;
+}
+
+#pNameText {
+    font-family: Ink free;
+    color: gray;
+    font-size: 25px;
+}
+
+#pName {
+    font-family: Ink free;
+    font-size: 20px;
+    border: 1px;
+    border-radius: 3px;
+    background-color: gray;
+
+
+}
+
+#playerListArea {
+    width: 300px;
+    height: 350px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
+    margin-left: -450px;
+    margin-top: 300px;
+    float: left;
+}
+
+#pList {
+    color: gray;
+    font-size: 25px;
+    font-family: Ink free;
+    margin-left: 3px;
+    float: left;
+
+
+}
+
+#score {
+    background-color: gray;
+    font-family: Ink free;
+}
+
+#cardPlace {
+    width: 400px;
+    height: 602px;
+    margin-left: 500px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(card.png);
+    border: 1px;
+    border-radius: 15px;
+    margin-top: 53px;
+    margin-left: 250px;
+    float: left;
+    visibility: hidden;
+}
+
+#mode {
+    text-align: center;
+    margin-top: 200px;
+    font-family: Ink free;
+    font-size: 40px;
+    color: white;
+}
+
+#word {
+    text-align: center;
+    font-family: Ink free;
+    font-size: 40px;
+    color: white;
+}
+
+#clock {
+    text-align: center;
+    font-family: Ink free;
+    font-size: 40px;
+    color: white;
+}
+
+#addMode {
+    margin-top: 250px;
+    margin-left: 10px;
+    visibility: hidden;
+
+}
+
+#addWord {
+    margin-top: 120px;
+    margin-left: 10px;
+    visibility: hidden;
+}
+
+#startClock {
+    margin-top: 120px;
+    margin-left: 10px;
+    visibility: hidden;
+}
+
+#nextPlayer {
+    visibility: hidden;
+    margin-left: 10px;
+}
