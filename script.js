@@ -38,6 +38,10 @@ let openTime = 150;
 let nextPlayer = document.getElementById('nextPlayer');
 let cardPlace = document.getElementById('cardPlace');
 let pNameText = document.getElementById('pNameText');
+let iForgotBtn = document.getElementById('iForgot');
+let actualPlayer = document.getElementById('actualPlayer');
+let playerIndex = 0;
+let catchBtn = document.getElementById('catch');
 
 
 
@@ -74,6 +78,7 @@ function clearGameArea() {
     startBtn.remove();
     pNameText.remove();
     startCardArea();
+    showActualPlayer();
 
 };
 
@@ -102,7 +107,7 @@ let newTime = {
             lastMinSound.play();
         }
         else if (openTime === 0) {
-            alert('Time is up!');
+
             clearInterval(clicking);
             changePlayer();
 
@@ -121,8 +126,28 @@ timeStarter.onclick = function () {
 nextPlayer.onclick = function () {
     openTime = 150;
     getNewPlayer();
+    playerIndex++;
+    if (playerIndex === players.length - 1) {
+        playerIndex = 0;
+    };
+    showActualPlayer();
 
 
+};
+
+iForgotBtn.onclick = function () {
+    showModeAndWord();
+    setTimeout(hideModeAndWord, 2000);
+};
+
+catchBtn.onclick = function () {
+    clearInterval(clicking);
+    changePlayer();
+
+}
+
+function showActualPlayer() {
+    actualPlayer.innerHTML = players[playerIndex] + `'s card`;
 };
 
 function inGame() {
@@ -131,6 +156,8 @@ function inGame() {
     modeGenerator.style.visibility = 'hidden';
     wordGenerator.style.visibility = 'hidden';
     timeStarter.style.visibility = 'hidden';
+    iForgotBtn.style.visibility = 'visible';
+    catchBtn.style.visibility = 'visible';
 }
 
 function changePlayer() {
@@ -140,6 +167,8 @@ function changePlayer() {
     modeGenerator.style.visibility = 'hidden';
     wordGenerator.style.visibility = 'hidden';
     timeStarter.style.visibility = 'hidden';
+    iForgotBtn.style.visibility = 'hidden';
+    catchBtn.style.visibility = 'hidden';
 
 };
 
@@ -154,6 +183,16 @@ function getNewPlayer() {
     timeArea.style.color = 'white';
 
 };
+
+function showModeAndWord() {
+    myModeTextArea.style.visibility = 'visible';
+    myWordTextArea.style.visibility = 'visible';
+};
+
+function hideModeAndWord() {
+    myModeTextArea.style.visibility = 'hidden';
+    myWordTextArea.style.visibility = 'hidden';
+}
 
 function startCardArea() {
     pListArea.style.marginLeft = '25px';
